@@ -1,9 +1,8 @@
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
+// export const runtime = "edge"; 2nd example with node runtime.
 
 export async function GET(request: NextRequest) {
-  // Return all searchParams as object;
   const searchParams = request.nextUrl.searchParams;
 
   const searchParamsObject = Object.fromEntries(searchParams);
